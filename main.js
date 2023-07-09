@@ -156,7 +156,7 @@ function updateAudioPitch(event) {
 
 //Creating a countdown timer of 2 minutes
 // Set the countdown duration of 2 minutes in seconds
-let countdownDuration = 1;
+let countdownDuration = 120;
 let threeSecondCountdown = 3;
 
 // select element to display countdown
