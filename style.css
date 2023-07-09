@@ -1,0 +1,159 @@
+#dogImage {
+    height: 150px;
+    position: absolute;
+    display: none;
+}
+
+#audioElement {
+    display: none;
+}
+
+#dogImage.dogImageReposition {
+    height: 45vh;
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease-in;
+}
+
+#playAgainBtn {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#continueBtn {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+    transition: opacity 0.5s ease-in;
+}
+
+body {
+    background-image: url(dog-background.avif);
+    font-family: "Arial", sans-serif;
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+.board {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.board div {
+    display: flex;
+    gap: 5px;
+}
+
+.scoreContainer,
+.countdownContainer {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+button {
+    color: #ff0066;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff0066;
+    color: #ffffff;
+}
+
+.scoreContainer h2,
+.countdownContainer h2 {
+    font-size: 25px;
+    color: #ff0066;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gameOverContainer {
+    display: none;
+}
+
+.gameOverContainer h2 {
+    text-align: center;
+}
+
+#gameIntroText,
+#gameEndText {
+    color: #ff0066;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.startGameContainer,
+.gameOverContainer {
+    min-width: 500px;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffd700;
+    border-radius: 10px;
+    padding: 25px;
+    z-index: 2;
+}
+
+#threeSecondCountdown {
+    font-size: 10rem;
+    display: none;
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff0066;
+    margin-top: 0;
+}
+
+.rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.dog-gif {
+    position: absolute;
+    height: 200px;
+    animation: rainAnimation 5s linear infinite;
+}
+
+footer {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+}
+
+@keyframes rainAnimation {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(calc(100vh + 50px));
+    }
+}

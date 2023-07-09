@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- start the game -->
+        <div class="startGameContainer">
+            <p id="gameIntroText">
+                Unleash your inner dog whisperer and sniff out as many furry
+                friends as you can in just two minutes!
+            </p>
+
+            <h2>Instructions</h2>
+            <p>1.) Make sure to turn your audio on before playing.</p>
+            <p>2.) Click your mouse around to find the invisible dog.</p>
+            <p>3.) Keep your ears perked up and ready for the challenge!</p>
+            <button id="startGameBtn">Start Game</button>
+        </div>
+
+        <!-- 3 second countdown before game starts -->
+        <h1 id="threeSecondCountdown">3</h1>
+
+        <!-- display the board with player score and countdown timer -->
+        <div class="board">
+            <div class="scoreContainer">
+                <h2>Dogs Found:</h2>
+                <h2 id="playerScore">0</h2>
+            </div>
+            <div class="countdownContainer">
+                <h2 id="time">Time Remaining:</h2>
+                <h2 id="countdown">02:00</h2>
+            </div>
+        </div>
+
+        <!-- hidden dog gif -->
+            <img alt="dog gif" id="dogImage" />
+
+        <!-- embedded dog audio -->
+        <audio id="audioElement" controls>
+            <source
+                src="/audio/Dog Barking.m4r"
+                type="audio/mpeg"
+                id="source"
+            />
+        </audio>
+
+        <button id="continueBtn">Continue</button>
+
+        <!-- game over  -->
+        <div class="gameOverContainer">
+            <h2>Time's Up!</h2>
+            <p id="gameEndText"></p>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+
+        <!-- dog rain on game over -->
+        <div class="rain-container"></div>
+
+        <footer class="footer">
+            <a href="#" class="footer-content">Credits</a>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>
