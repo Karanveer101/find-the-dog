@@ -107,13 +107,11 @@ button:hover {
     min-width: 500px;
     max-width: 600px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #ffd700;
     border-radius: 10px;
     padding: 25px;
     z-index: 2;
+    animation: slideFromLeft 1s ease-in forwards;
 }
 
 #threeSecondCountdown {
@@ -155,5 +153,33 @@ footer {
     }
     100% {
         transform: translateY(calc(100vh + 50px));
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        left: -100%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        top: 50%;
+        left: -100%;
+        transform: translate(-50%, -50%);
     }
 }

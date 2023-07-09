@@ -235,7 +235,7 @@ function startCountDown() {
 //function to handle start game button
 
 function startGame() {
-    startGameContainer.style.display = "none";
+    startGameContainer.style.animation = "slideFromRight 1s ease-in forwards";
     startThreeSecondCountdown();
 }
 
@@ -329,6 +329,9 @@ function playAgain() {
     //stop dog rain
     stopDogRain();
 
+    //slide left
+    gameOverContainer.style.animation = "slideFromRight 1s ease-in forwards";
+
     //remove event listener to enable audio
     window.addEventListener("click", audioHandler);
 
@@ -339,9 +342,6 @@ function playAgain() {
 
     //display dogs found score
     playerScoreElement.textContent = dogsFound;
-
-    //hide end game container
-    gameOverContainer.style.display = "";
 }
 
 //footer expanded content
